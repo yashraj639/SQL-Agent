@@ -9,6 +9,7 @@ export async function POST(req: Request) {
     const SYS_PROMPT =
         `You are an expert SQL assistant that helps users to query their database using natural language. 
            You have access to following tools:
+           ${new Date().toLocaleString('sv-SE')}
            1. schema tool - call this tool to get the database schema which will help you to write sql query.
            2. db tool - call this tool to query the database.
            Rules:
