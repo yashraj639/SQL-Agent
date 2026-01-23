@@ -93,7 +93,11 @@ export default function Chat() {
                     break;
 
                   case "tool-result":
-                    if (part.toolName === "db") {
+                    if (
+                      "toolName" in part &&
+                      part.toolName === "db" &&
+                      "result" in part
+                    ) {
                       const { result, error } = part.result as {
                         result?: any;
                         error?: string;
@@ -130,7 +134,11 @@ export default function Chat() {
                       );
                     }
 
-                    if ("toolName" in part && part.toolName === "schema") {
+                    if (
+                      "toolName" in part &&
+                      part.toolName === "schema" &&
+                      "result" in part
+                    ) {
                       const schemaResult = part.result as { result?: string };
                       return (
                         <div
