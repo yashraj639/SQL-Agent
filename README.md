@@ -101,7 +101,8 @@ Add your Google AI API key and database configuration to `.env.local`:
 
 ```env
 GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
-DATABASE_URL=your_database_url_here
+TURSO_DATABASE_URL=your_database_url_here
+TURSO_AUTH_TOKEN=your_turso_auth_token_here
 ```
 
 4. Generate and run database migrations:
